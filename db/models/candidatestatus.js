@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   CandidateStatus.init({
     CandidateId: DataTypes.INTEGER,
-    StageId: DataTypes.INTEGER,
+    StatusId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'CandidateStatus',

@@ -176,9 +176,9 @@ a {
   flex-grow: 1;
 }
 
-/* ################################### */
-/* ########## VACANCY-STAGE ########## */
-/* ################################### */
+/* #################################### */
+/* ########## VACANCY-NAVBAR ########## */
+/* #################################### */
 
 .vacancy-title {
   margin: 0;
@@ -216,7 +216,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-grow: 1;  
+  flex-grow: 1;
 }
 
 .vacancy-stage-navbar span {
@@ -230,7 +230,6 @@ a {
 }
 
 .active-stage {
-  /* font-weight: 700; */
   color: #4520ab;
   background-color:#e9e9ff;
 }
@@ -247,10 +246,128 @@ a {
   border-right: 3px solid #4520ab;
 }
 
+/* ################################## */
+/* ########## VACANCY-LIST ########## */
+/* ################################## */
+
+.vacancy-list-title {
+  margin: 0;
+  width: 100%;
+  border-top: 2px solid #e9e9ff;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #2b0e7a;
+  color: #e9e9ff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.vacancy-list-title span {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.vacancy-list {
+  margin: 0;
+  width: 100%;
+  border-top: 2px solid #e9e9ff;
+  padding: 10px 0;
+  background-color: #4520ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vacancy-list div {
+  width: 130px;
+  color: #e9e9ff;
+  font-size: 22px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.vacancy-list a {
+  color: #e9e9ff;
+  line-height: 1.25;
+  font-size: 20px;
+  text-align: center;
+  flex-grow: 1;
+  padding-right: 150px;
+}
+
+.vacancy-list a:hover {
+  text-shadow: 0 0 3px #e9e9ff;
+}
+
+/* ################################### */
+/* ########## VACANCY-STAGE ########## */
+/* ################################### */
+
 .vacancy-stage {
-  height: 150px;
   margin: 0;
   padding: 10px;
-  border: 3px solid #4520ab;
+  /* border: 3px solid #4520ab; */
   border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.candidate-list {
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.candidate-list > div {
+  margin: 5px 0;
+  padding: 5px 10px 10px 10px;
+  color:#4520ab;
+  background-color: #e9e9ff;
+  border: 3px solid #4520ab;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.candidate-list > div:hover {
+  text-shadow: 0 0 2px #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+.candidate-list > div p {
+  margin: 5px 0 0 0;
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.candidate-list > div:first-child {
+  margin-top: 0;
+}
+
+.candidate-list > div:last-child {
+  margin-bottom: 0;
+}
+
+.candidate-list .active {
+  color: #e9e9ff;
+  background-color: #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+.candidate-info {
+  box-shadow: 0 0 5px #4520ab;
+  border: 3px solid #4520ab;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-grow: 1;
 }

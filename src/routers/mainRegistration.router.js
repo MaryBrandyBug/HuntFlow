@@ -13,30 +13,39 @@ router.post('/', async (req, res) => {
   if (req.body.name) {
     const { email, name, password } = req.body;
     try {
-      const hash = await bcrypt.hash(password, 10);
-      const newUser = await User.create({ email, name, password: hash });
-      req.session.newUser = newUser.name;
-      req.session.save(() => {
-        res.redirect('/');
-      });
+      const user = await User.findOne({ where: { email: req.body.email } });
+      if (!user) {
+        const hash = await bcrypt.hash(password, 10);
+        const newUser = await User.create({ email, name, password: hash });
+        req.session.newUser = newUser.name;
+        req.session.save(() => {
+          res.json({ status: 'ok' });
+        });
+      } else if (user) {
+        res.sendStatus(403);
+      }
     } catch (error) {
-      res.sendStatus(403);
+      console.log(error);
     }
   } else {
     const { enterEmail, enterPassword } = req.body;
     try {
       const user = await User.findOne({ where: { email: enterEmail } });
-      const passCheck = await bcrypt.compare(enterPassword, user.password);
-      if (passCheck) {
-        req.session.newUser = user.name;
-        req.session.save(() => {
-          res.redirect('/');
-        });
+      if (user) {
+        const passCheck = await bcrypt.compare(enterPassword, user.password);
+        if (passCheck) {
+          req.session.newUser = user.name;
+          req.session.save(() => {
+            res.json({ status: 'okey ' });
+          });
+        } else {
+          res.sendStatus(403);
+        }
       } else {
         res.sendStatus(403);
       }
     } catch (error) {
-      res.sendStatus(400);
+      console.log(error);
     }
   }
 });

@@ -57,7 +57,7 @@ const addCandidateStatus = async () => {
   const arrOfCandidatesId = [];
   for (let i = 0; i < candidatesStatus.length; i++) {
     for (let k = 0; k < statusId.length; k++) {
-      console.log(candidatesStatus[i]);
+      // console.log(candidatesStatus[i]);
       if (candidatesStatus[i].StatusId === statusId[k]) {
         arrOfCandidatesId.push(candidatesStatus[i].CandidateId);
       }
@@ -71,8 +71,29 @@ const addCandidateStatus = async () => {
       }
     }
   }
-  console.log(arrOfCandidates);
+  // console.log(arrOfCandidates);
 };
-addCandidateStatus();
+// addCandidateStatus();
 
-// * 
+// * кандидаты include
+const getAllCandidates = async () => {
+  // const result = await Status.findAll({ where: { VacancyId: 2 } });
+  // console.dir(result.map((el) => el.get({ plain: true })), { depth: null });
+  const result1 = await Candidate.findAll({ include: { model: Status, where: { VacancyId: 2 }, required: true }, required: true });
+  const mapped = result1.map((el) => el.get({ plain: true }).id);
+};
+
+// getAllCandidates();
+
+// * status кандидата include
+const getStatusOfCandidate = async () => {
+  const result = await Status.findAll({ include: { model: Candidate, where: { id: 3 }, required: true }, required: true });
+  const mapped = result.map((el) => el.get({ plain: true }).StageId);
+  // console.dir(result.map((el) => el.get({ plain: true })), { depth: null });
+  const result1 = await Status.findAll({ where: { VacancyId: 3 }, include: { model: Candidate, where: { id: 3 }, required: true }, required: true  });
+  const mapped1 = result1.map((el) => el.get({ plain: true }).StageId);
+  console.log(mapped1);
+};
+// getStatusOfCandidate();
+
+// *

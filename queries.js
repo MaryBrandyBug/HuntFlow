@@ -1,4 +1,5 @@
 const {
+  User,
   Vacancy, Candidate, Status, CandidateStatus,
 } = require('./db/models');
 
@@ -90,10 +91,24 @@ const getStatusOfCandidate = async () => {
   const result = await Status.findAll({ include: { model: Candidate, where: { id: 3 }, required: true }, required: true });
   const mapped = result.map((el) => el.get({ plain: true }).StageId);
   // console.dir(result.map((el) => el.get({ plain: true })), { depth: null });
-  const result1 = await Status.findAll({ where: { VacancyId: 3 }, include: { model: Candidate, where: { id: 3 }, required: true }, required: true  });
+  const result1 = await Status.findAll({ where: { VacancyId: 3 }, include: { model: Candidate, where: { id: 3 }, required: true }, required: true });
   const mapped1 = result1.map((el) => el.get({ plain: true }).StageId);
   console.log(mapped1);
 };
 // getStatusOfCandidate();
 
-// *
+// * список вакансий с датой создания и всем всем
+const getVacancies = async () => {
+  const result = await Vacancy.findAll({ include: { model: User, where: { id: 2 }, required: true }, required: true });
+  const mapped = result.map((el) => el.get({ plain: true }).id);
+  console.log(mapped);
+};
+// getVacancies();
+
+// * кандидаты на вакансию
+const getAllCandidatesOnVacancy = async () => {
+  const result = await Candidate.findAll({ include: { model: Status, where: { VacancyId: 2 }, required: true }, required: true });
+  const mapped = result.map((el) => el.get({ plain: true }).id);
+  console.log(mapped.length);
+};
+// getAllCandidatesOnVacancy();

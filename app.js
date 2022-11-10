@@ -19,6 +19,9 @@ const SESSION_SECRET = process.env.SESSION_SECRET ?? 'qwerty';
 const mainRegistration = require('./src/routers/mainRegistration.router');
 const logout = require('./src/routers/logout.router');
 const mainRoute = require('./src/routers/mainRoute');
+const newVacancyRouter = require('./src/routers/newVacancyRouter');
+const vacancyFormSubmit = require('./src/routers/vacancyFormSubmit');
+const newCandidateForm = require('./src/routers/newCandidateForm');
 
 app.use(logger('dev')); // !!! 'dev' - параметр, отвечающий за стиль отображения информации logger'ом (ещё есть 'short' и 'tiny')
 app.use(express.json()); // !!! Для расшифровки запросов
@@ -42,6 +45,9 @@ app.use(session(sessionConfig));
 app.use('/', mainRegistration);
 app.use('/logout', logout);
 app.use('/main', mainRoute);
+app.use('/newvacancy', newVacancyRouter);
+app.use('/main', vacancyFormSubmit);
+app.use('/newcandidate', newCandidateForm);
 
 app.listen(PORT, () => {
   console.log(`Server started at PORT: ${PORT}`);

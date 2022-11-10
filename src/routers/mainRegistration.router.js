@@ -36,11 +36,11 @@ router.post('/', async (req, res) => {
     const { enterEmail, enterPassword } = req.body;
     try {
       const user = await User.findOne({ where: { email: enterEmail } });
-      console.log(user);
       if (user) {
         const passCheck = await bcrypt.compare(enterPassword, user.password);
         if (passCheck) {
           req.session.newUser = user.name;
+          console.log(req.session.newUser);
           req.session.userId = user.id;
           req.session.save(() => {
             res.json({ status: 'okey ' });

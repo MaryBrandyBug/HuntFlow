@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&family=Ubuntu&display=swap');
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+  /* vertical-align: middle; */
+}
+
+body {
+  margin: 0;
+  min-width: 1600px;
+  background-color:#e9e9ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ############################ */
+/* ########## NAVBAR ########## */
+/* ############################ */
+
+.navbar {
+  width: 100%;
+  height: 56px;
+  background-color: #4520ab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-search {
+  margin-left: 10px;
+  margin-right: 5px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;  
+}
+
+.logo-search img {
+  width: 25px;
+  height: 25px;
+}
+
+.logo-search button {
+  height: 32px;
+  width: 150px;
+  padding: 0 2px;
+  margin-left: 4px;
+  color: #4520ab;
+  font-family: 'Rubik Marker Hatch', sans-serif;
+  font-size: 22px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-search button:hover {
+  border: 2px solid #4520ab;
+  box-shadow: 0 0 3px #4520ab;
+}
+
+.logo-search button:active {
+  box-shadow: none;
+  color: black;
+  border: 2px solid black;
+  transform: scale(0.99);
+}
+
+.logo-search input {
+  color: #4520ab;
+  font-weight: 700;
+  height: 32px;
+  width: 150px;
+  margin: 0 4px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #4520ab;
+  background-color: #e9e9ff;
+}
+
+.logo-search input:focus {
+  outline: none;
+  box-shadow: 0 0 4px #4520ab;
+}
+
+.nav-right {
+  margin-right: 10px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;  
+}
+
+.logout {
+  line-height: 28px;
+  padding: 0 4px;
+  margin-right: 4px;
+  color: #4520ab;
+  font-family: 'Rubik Marker Hatch', sans-serif;
+  font-size: 22px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.logout:hover {
+  border: 2px solid #4520ab;
+  box-shadow: 0 0 3px #4520ab;
+}
+
+.logout:active {
+  box-shadow: none;
+  color: black;
+  border: 2px solid black;
+  transform: scale(0.99);
+}
+
+.welcome {
+  color: dimgray;
+  height: 30px;
+  max-width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0 4px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #4520ab;
+  background-color: #e9e9ff;
+}
+
+.welcome:hover {
+  color: #4520ab;
+  box-shadow: 0 0 4px #4520ab;
+}
+
+.welcome:active {
+  box-shadow: none;
+  color: black;
+  border: 1px solid black;
+  transform: scale(0.99);
+}
+
+.nav-link {
+  color:#e9e9ff;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 3px #e9e9ff;
+}
+
+.nav-link:active {
+  text-shadow: 0 0 1px #e9e9ff;
+  transform: scale(0.985);
+}
+
+.separator {
+  padding: 0 10px;
+  margin: 0;
+  color: #e9e9ff;
+  font-weight: 700;
+}
+
+.fill {
+  flex-grow: 1;
+}
+
+/* #################################### */
+/* ########## VACANCY-NAVBAR ########## */
+/* #################################### */
+
+.vacancy-title {
+  margin: 0;
+  width: 100%;
+  border-top: 2px solid #e9e9ff;
+  border-bottom: 2px solid #e9e9ff;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #2b0e7a;
+  color: #e9e9ff;
+  line-height: 1.25;
+  font-size: 20px;
+}
+
+.vacancy-stage-navbar {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.vacancy-stage-navbar span {
+  padding-top: 10px;
+}
+
+
+.vacancy-stage-navbar a {
+  height: 120px;
+  padding: 10px;
+  font-weight: 700;
+  border-top: 3px solid #4520ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.vacancy-stage-navbar span {
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.vacancy-stage-navbar a:not(.active-stage) {
+  color: #e9e9ff;
+  background-color: #4520ab;
+}
+
+.active-stage {
+  color: #4520ab;
+  background-color:#e9e9ff;
+}
+
+.vacancy-stage-navbar a:hover {
+  text-shadow: 0 0 3px #e9e9ff;
+}
+
+.vacancy-stage-navbar > a:first-child {
+  border-left: 3px solid #4520ab;
+}
+
+.vacancy-stage-navbar > a:last-child {
+  border-right: 3px solid #4520ab;
+}
+
+/* ################################## */
+/* ########## VACANCY-LIST ########## */
+/* ################################## */
+
+.vacancy-list-title {
+  margin: 0;
+  width: 100%;
+  border-top: 2px solid #e9e9ff;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #2b0e7a;
+  color: #e9e9ff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.vacancy-list-title span {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.vacancy-list {
+  margin: 0;
+  width: 100%;
+  border-top: 2px solid #e9e9ff;
+  padding: 10px 0;
+  background-color: #4520ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vacancy-list div {
+  width: 130px;
+  color: #e9e9ff;
+  font-size: 22px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.vacancy-list a {
+  color: #e9e9ff;
+  line-height: 1.25;
+  font-size: 20px;
+  text-align: center;
+  flex-grow: 1;
+  padding-right: 150px;
+}
+
+.vacancy-list a:hover {
+  text-shadow: 0 0 3px #e9e9ff;
+}
+
+/* ################################### */
+/* ########## VACANCY-STAGE ########## */
+/* ################################### */
+
+.vacancy-stage {
+  margin: 0;
+  padding: 10px;
+  /* border: 3px solid #4520ab; */
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.candidate-list {
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.candidate-list > div {
+  margin: 5px 0;
+  padding: 5px 10px 10px 10px;
+  color:#4520ab;
+  background-color: #e9e9ff;
+  border: 3px solid #4520ab;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.candidate-list > div:hover {
+  text-shadow: 0 0 2px #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+.candidate-list > div p {
+  margin: 5px 0 0 0;
+  width: 400px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.candidate-list > div:first-child {
+  margin-top: 0;
+}
+
+.candidate-list > div:last-child {
+  margin-bottom: 0;
+}
+
+.candidate-list .active {
+  color: #e9e9ff;
+  background-color: #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+/* #################################### */
+/* ########## CANDIDATE-INFO ########## */
+/* #################################### */
+
+.candidate-card {
+  flex-grow: 1;
+}
+
+.candidate-info {
+  box-shadow: 0 0 5px #4520ab;
+  border: 3px solid #4520ab;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* #################################### */
+.info {
+  width: 600px;
+  /* border: 1px solid black; */
+}
+
+.bio {
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #4520ab;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.bio p {
+  margin: 4px 0;
+  color: dimgray;
+  font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+}
+
+p.name {
+  font-size: 22px;
+}
+
+.bio span {
+  color: #4520ab;
+  margin-left: 5px;
+}
+
+.bio button {
+  width: 100%;
+  height: 34px;
+  margin: 7px 0 -2px 0;
+  background-color: #e9e9ff;
+  border: 2px solid #4520ab;
+  border-radius: 5px;
+  color: #4520ab;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.bio button:hover {
+  text-shadow: 0 0 2px #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+.bio button:active {
+  text-shadow: 0 0 1px #4520ab;
+  box-shadow: 0 0 3px #4520ab;
+  transform: scale(0.985);
+}
+
+.bio div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bio input {
+  flex-grow: 1;
+  margin-left: 10px;
+  color: #4520ab;
+  font-weight: 700;
+}
+
+.bio input:focus {
+  background: none;
+  outline: none;
+  border: 2px solid #4520ab;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #4520ab;
+}
+
+/* ################################## */
+/* ########## STAGE-STATUS ########## */
+/* ################################## */
+
+.stage-status {
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #4520ab;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.stage-status-block {
+  width: 100%;
+  height: 240px; /* ################################## */
+  overflow: hidden;
+  text-align: center;
+}
+
+.stage-status > button {
+  width: 100%;
+  height: 34px;
+  margin: 5px 0 -2px 0;
+  background-color: #e9e9ff;
+  border: 2px solid #4520ab;
+  border-radius: 5px;
+  color: #4520ab;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.stage-status > button:hover {
+  text-shadow: 0 0 2px #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+.stage-status > button:active {
+  text-shadow: 0 0 1px #4520ab;
+  box-shadow: 0 0 3px #4520ab;
+  transform: scale(0.985);
+}
+
+.stage-status h3 {
+  margin: 10px 0 0 0;
+  width: 100%;
+  font-size: 22px;
+  color: #4520ab;
+  font-weight: 700;
+}
+
+.stage-status p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #4520ab;
+  font-weight: 700;
+  padding: 0;
+  margin: 5px 0;
+  border: 2px solid #e9e9ff;
+  background-color: #e9e9ff;
+  border-radius: 5px;
+}
+
+.stage-status-block > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stage-date,
+.stage-status-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stage-date button,
+.stage-status-button button {
+  height: 34px;
+  width: 100px;
+  border: 2px solid #4520ab;
+  border-radius: 5px;
+  color: #4520ab;
+  font-weight: 500;
+  font-size: 16px;
+  background-color:#e9e9ff;
+  margin-left: 5px;
+}
+
+.stage-date button:hover,
+.stage-status-button button:hover {
+  text-shadow: 0 0 2px #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+.stage-date button:active,
+.stage-status-button button:active {
+  text-shadow: 0 0 1px #4520ab;
+  box-shadow: 0 0 3px #4520ab;
+  transform: scale(0.985);
+}
+
+.stage-date p {
+  flex-grow: 1;
+}
+
+.stage-date input {
+  flex-grow: 1;
+  height: 30px;
+  color: #4520ab;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 5px 0;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.stage-date input:focus {
+  background: none;
+  outline: none;
+  border: 2px solid #4520ab;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #4520ab;
+}
+
+p.red {
+  flex-grow: 1;
+  height: 34px;
+  line-height: 34px;
+  color: red;
+  border: none;
+  background-color:rgba(255, 182, 193, 0.4);
+}
+
+p.green {
+  flex-grow: 1;
+  height: 34px;
+  line-height: 34px;
+  color:darkgreen;
+  border: none;
+  background-color:rgba(50, 205, 50, 0.4);
+}
+
+/* ################################## */
+/* ########## CHANGE-STAGE ########## */
+/* ################################## */
+
+.set-datetime {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.set-datetime input {
+  height: 30px;
+  color: #4520ab;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 5px 0;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.set-datetime input:focus {
+  background: none;
+  outline: none;
+  border: 2px solid #4520ab;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #4520ab;
+}
+
+.stage-status form > button {
+  width: 100%;
+  height: 34px;
+  margin: 5px 0 -2px 0;
+  background-color: #e9e9ff;
+  border: 2px solid #4520ab;
+  border-radius: 5px;
+  color: #4520ab;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.stage-status form > button:hover {
+  text-shadow: 0 0 2px #4520ab;
+  box-shadow: 0 0 5px #4520ab;
+}
+
+.stage-status form > button:active {
+  text-shadow: 0 0 1px #4520ab;
+  box-shadow: 0 0 3px #4520ab;
+  transform: scale(0.985);
+}
+
+.stage-status div.stage-status-block {
+  padding-bottom: 10px;
+}
+
+.edit-stage {
+  height: 100%;
+}
+
+.set-stage {  
+  flex-grow: 1;
+  margin: 5px 0;
+  overflow-y: scroll;
+  border: 1px solid dimgray;
+  padding: 5px 10px;
+}
+
+.stage-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.stage-radio h4 {
+  flex-grow: 1;
+  margin: 4px 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4520ab;
+  background-color:#e9e9ff;
+  border: 2px solid #e9e9ff;
+  border-radius: 5px;
+}
+
+h4.active {
+  border: 2px solid #4520ab;
+  box-shadow: 0 0 3px #4520ab;
+}
+
+/* ################################## */
+/* ########## RESUME-BLOCK ########## */
+/* ################################## */
+
+.resume {
+  flex-grow: 1;
+  align-self: stretch;
+  margin: 0;
+  margin-right: 5px;
+  padding: 10px 10px 16px 0;
+  /* border: 1px solid black; */
+  overflow: hidden;
+}
+
+embed {  
+  width: 100%;
+  height: 100%;
+  border: 3px solid #4520ab;
+  border-radius: 5px;
+}
+
+/* ################################### */
+/* ########## COMMENT-BLOCK ########## */
+/* ################################### */
+
+.comment {
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #4520ab;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.comment-list {
+  height: 150px;
+  overflow-y: scroll;
+  border: 1px solid black;
+}

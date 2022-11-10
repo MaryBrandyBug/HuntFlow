@@ -1,0 +1,52 @@
+1. Инициализация проекта 
+  - npm init -y
+  - npm i express dotenv
+  - npm i pg pg-hstore sequelize sequelize-cli
+  - npx create-gitignore node
+  - npx eslint --init
+  - npm i -D nodemon morgan
+    "dev": "nodemon src/index.js --ignore sessions --ext js,jsx"
+
+  - npm i express-session session-file-store bcrypt  
+
+  - npm i ws
+    const color = `#${(`${Math.random().toString(16)}000000`).substring(2, 8).toUpperCase()}`
+
+2. Установим React Babel
+  - npm i @babel/core @babel/preset-env @babel/preset-react @babel/register react react-dom
+  - touch .babelrc
+
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
+
+DB_USERNAME=
+DB_PASSWORD=
+DATABASE=HuntFlow
+PORT=3000
+SESSION_SECRET=
+
+const path = require('path');
+  module.exports = {
+    'config': path.resolve('db', 'config', 'database.js'),
+    'models-path': path.resolve('db', 'models'),
+    'seeders-path': path.resolve('db', 'seeders'),
+    'migrations-path': path.resolve('db', 'migrations'),
+  };
+
+1 вариант
+  npx sequelize-cli model:generate --name Vacancy --attributes title:string,UserId:integer
+  npx sequelize-cli model:generate --name Candidate --attributes first_name:string,last_name:string,email:string,phone_number:integer,VacancyId:integer
+  npx sequelize-cli model:generate --name Stage --attributes UserId:integer,CandidateId:integer,VacancyId:integer,invation_sent:boolean,screening_call:boolean,video_interview:boolean,resume_to_customer:boolean,interview_with_customer:boolean,has_offer:boolean,accept_offer:boolean,renouncement:boolean,status:string
+
+2 вариант
+  npx sequelize-cli model:generate --name User --attributes name:string,password:string,email:string
+  npx sequelize-cli model:generate --name Stage --attributes nameOfStage:string
+  npx sequelize-cli model:generate --name Vacancy --attributes title:string,UserId:integer
+  npx sequelize-cli model:generate --name Candidate --attributes first_name:string,last_name:string,email:string,phone_number:integer,resume:string
+  npx sequelize-cli model:generate --name Status --attributes VacancyId:integer,StageId:integer
+  npx sequelize-cli model:generate --name CandidateStatus --attributes CandidateId:integer,StatusId:integer
+  

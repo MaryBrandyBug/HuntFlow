@@ -6,12 +6,11 @@ const { User } = require('../../db/models');
 
 router.get('/', (req, res) => {
   const newUser = req.session?.newUser;
-  if () {
-
+  if (newUser) {
+    res.redirect('/main');
   } else {
-
+    renderTemplate(MainComponent, { newUser }, res);
   }
-  renderTemplate(MainComponent, { newUser }, res);
 });
 
 router.post('/', async (req, res) => {

@@ -1,11 +1,11 @@
 const {
   User,
-  Vacancy, Candidate, Status, CandidateStatus,
+  Vacancy, Candidate, Entry,
 } = require('./db/models');
 
 // const addVacancy1 = async () => {
 //   try {
-//     const result = await Vacancy.create({ UserId: 1, title: 'Frontend-Developer junior' });
+//     const result = await Vacancy.create({ title: 'Frontend-Developer senior', company: 'яндекс', UserId: 2 });
 //     return result;
 //   } catch (error) {
 //     console.log(error.message);
@@ -13,10 +13,20 @@ const {
 // };
 // addVacancy1();
 
+// const addUser1 = async () => {
+//   try {
+//     const result = await User.create({ name: 'Pavel', password: '123',  });
+//     return result;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+// addUser1();
+
 // const addCandidate1 = async () => {
 //   try {
 //     const result = await Candidate.create({
-//       first_name: 'Nikolay', last_name: 'Suhov', email: 'nik@mail.ru', phone_number: '89990988976', resume: 'resume',
+//       VacancyId: 1, name: 'Nikolay', surname: 'Suhov', middlename: 'Sergeevich', email: 'nik@mail.ru', phone: '89990988976', resume: 'resume', experience: '3 года', location: 'Moscow',
 //     });
 //     return result;
 //   } catch (error) {
@@ -25,6 +35,41 @@ const {
 // };
 // addCandidate1();
 
+// const addCandidate2 = async () => {
+//   try {
+//     const result = await Candidate.create({
+//       VacancyId: 1, name: 'Nikolay', surname: 'Sergeev', middlename: 'Pavlovich', email: 'nikol@mail.ru', phone: '89990988890', resume: 'resume', experience: '4 года', location: 'Moscow',
+//     });
+//     return result;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+// addCandidate2();
+
+// const addCandidate3 = async () => {
+//   try {
+//     const result = await Candidate.create({
+//       VacancyId: 2, name: 'Anna', surname: 'Frolova', middlename: 'Andreevna', email: 'an@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
+//     });
+//     return result;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+// addCandidate3();
+
+// const addCandidate4 = async () => {
+//   try {
+//     const result = await Candidate.create({
+//       VacancyId: 2, name: 'Boris', surname: 'Fokin', middlename: 'Alexandrovich', email: 'fok@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
+//     });
+//     return result;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+// addCandidate4();
 // const addStatus = async () => {
 //   try {
 //     const result = await Status.create({
@@ -48,6 +93,54 @@ const {
 //   }
 // };
 // addCandidateStatus();
+
+const addEntry1 = async () => {
+  try {
+    const result = await Entry.create({
+      CandidateId: 2, VacancyId: 1, status: 'stage5',
+    });
+    return result;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+addEntry1();
+
+const addEntry2 = async () => {
+  try {
+    const result = await Entry.create({
+      CandidateId: 2, VacancyId: 1, status: 'stage5',
+    });
+    return result;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+addEntry2();
+
+const addEntry3 = async () => {
+  try {
+    const result = await Entry.create({
+      CandidateId: 3, VacancyId: 2, status: 'stage3',
+    });
+    return result;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+addEntry3();
+
+const addEntry4 = async () => {
+  try {
+    const result = await Entry.create({
+      CandidateId: 4, VacancyId: 2, status: 'stage2',
+    });
+    return result;
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+addEntry4();
 
 // * количество кандидатов на вакансии
 const addCandidateStatus = async () => {

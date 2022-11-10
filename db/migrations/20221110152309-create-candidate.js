@@ -8,24 +8,43 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      first_name: {
+      VacancyId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'Vacancies',
+          key: 'id',
+        },
+      },
+      name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      last_name: {
+      surname: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      middlename: {
         type: Sequelize.STRING,
         allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: false,
       },
-      phone_number: {
+      phone: {
         type: Sequelize.STRING,
-        allowNull: false,
       },
       resume: {
         type: Sequelize.STRING,
+      },
+      experience: {
+        type: Sequelize.STRING,
+      },
+      location: {
+        type: Sequelize.STRING,
+      },
+      comment: {
+        type: Sequelize.TEXT,
       },
       createdAt: {
         allowNull: false,

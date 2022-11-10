@@ -9,6 +9,7 @@ const FileStore = require('session-file-store')(session);
 
 const mainRegistration = require('./src/routers/mainRegistration.router');
 const logout = require('./src/routers/logout.router');
+const mainRoute = require('./src/routers/MainRoute')
 
 const { PORT } = process.env ?? 3001;
 const { SESSION_SECRET } = process.env;
@@ -34,6 +35,7 @@ app.use(session(sessionConfig));
 
 app.use('/', mainRegistration);
 app.use('/logout', logout);
+app.use('/', mainRoute);
 
 app.listen(PORT, () => {
   console.log('Сервер запущен на 3000 порту!');

@@ -35,7 +35,7 @@ app.use(session(sessionConfig));
 
 app.use('/', mainRegistration);
 app.use('/logout', logout);
-app.use('/', mainRoute);
+app.use('/main', mainRoute);
 
 app.listen(PORT, () => {
   console.log('Сервер запущен на 3000 порту!');

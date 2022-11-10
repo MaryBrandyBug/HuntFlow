@@ -3,7 +3,7 @@ const MainLayout = require('../views/MainLayout');
 const renderTemplate = require('../lib/renderTemplate');
 
 router.get('/', (req, res) => {
-  const userName = req.session.newUser ?? 'Вася';
+  const userName = req.session.newUser ?? 'Вася'; //!
   renderTemplate(MainLayout, { userName }, res);
 });
 

@@ -2,11 +2,10 @@ const router = require('express').Router();
 const { Vacancy, Candidate, Entry } = require('../../db/models');
 
 // router.post('/:vacId', async (req, res) => { //! не дописано!!!!!
-router.post('/', async (req, res) => {
-  // const { vacId } = req.params;
-  const vacId = 2;
+router.post('/:vacId', async (req, res) => {
+  const { vacId } = req.params;
+  // const vacId = 2;
   const {
-    // ! req.params и пост запрос?
     name, surname, middlename, email, phone, experience, resume, comment, location,
   } = req.body;
   const result = await Candidate.create({

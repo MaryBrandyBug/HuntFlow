@@ -17,7 +17,7 @@ a:hover,a:focus{
  position: absolute;
  top: 0;
  left: 0;
- background: linear-gradient(#4520ab,#4520ab);
+ background: linear-gradient(#8989c8,#D5DBDB);
  opacity: 0.85;
 }
 .tab .nav-tabs{
@@ -80,7 +80,7 @@ a:hover,a:focus{
 }
 .form-horizontal .form-group label{
  padding: 0 20px;
- color: #7f8291;
+ color: #dfdfdf;
  text-transform: capitalize;
  margin-bottom: 10px;
 }

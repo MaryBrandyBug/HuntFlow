@@ -2,65 +2,51 @@ const React = require('react');
 const VacancyStages = require('./VacancyStages');
 
 module.exports = function StageInfo({
-  userName, currVacancy, candidateLength, stageName, stageCandidates,
+  userName, currVacancy, candidateLength, allStagesByVacancy, stageName, stageCandidates,
 }) {
   return (
-    <VacancyStages userName={userName} currVacancy={currVacancy} candidateLength={candidateLength} stageName={stageName}>
+    <VacancyStages userName={userName} currVacancy={currVacancy} candidateLength={candidateLength} allStagesByVacancy={allStagesByVacancy} stageName={stageName}>
       {/* <script defer src="./js/register.js" /> */}
 
       <div className="vacancy-stage">
-
         <div className="candidate-list">
-          <div>
-            <p><b>Фамилия Имя</b></p>
-            <p>JavaScript-разработчик</p>
-            <p>Elbrus Bootcamp</p>
-            <p>
-              Статус этапа:
-              {' '}
-              <b>не пройден</b>
-            </p>
-          </div>
-          <div className="active">
-            <p><b>Фамилия Имя</b></p>
-            <p>JavaScript-разработчик</p>
-            <p>Elbrus Bootcamp</p>
-            <p>
-              Статус этапа:
-              {' '}
-              <b>не пройден</b>
-            </p>
-          </div>
-          <div>
-            <p><b>Фамилия Имя</b></p>
-            <p>JavaScript-разработчик</p>
-            <p>Elbrus Bootcamp</p>
-            <p>
-              Статус этапа:
-              {' '}
-              <b>не пройден</b>
-            </p>
-          </div>
-          <div>
-            <p><b>Фамилия Имя</b></p>
-            <p>JavaScript-разработчик</p>
-            <p>Elbrus Bootcamp</p>
-            <p>
-              Статус этапа:
-              {' '}
-              <b>не пройден</b>
-            </p>
-          </div>
-          <div>
-            <p><b>Фамилия Имя</b></p>
-            <p>JavaScript-разработчик</p>
-            <p>Elbrus Bootcamp</p>
-            <p>
-              Статус этапа:
-              {' '}
-              <b>не пройден</b>
-            </p>
-          </div>
+
+          {stageCandidates.filter((el) => !el[stageName])
+            .map((el) => (
+              <div>
+                <p><b>{`${el.Candidate.name} ${el.Candidate.surname}`}</b></p>
+                <p>{currVacancy.title}</p>
+                <p>{currVacancy.company}</p>
+
+                {el.status === 'stage8' ? '' : (
+                  <p>
+                    Статус этапа:
+                    {' '}
+                    <b>{el[el.status] ? 'пройден' : 'не пройден'}</b>
+                  </p>
+                )}
+
+              </div>
+            ))}
+
+          {stageCandidates.filter((el) => el[stageName])
+            .map((el) => (
+              <div>
+                <p><b>{`${el.Candidate.name} ${el.Candidate.surname}`}</b></p>
+                <p>{currVacancy.title}</p>
+                <p>{currVacancy.company}</p>
+
+                {el.status === 'stage8' ? '' : (
+                  <p>
+                    Статус этапа:
+                    {' '}
+                    <b>{el[el.status] ? 'пройден' : 'не пройден'}</b>
+                  </p>
+                )}
+
+              </div>
+            ))}
+
         </div>
         <div className="candidate-card" />
       </div>

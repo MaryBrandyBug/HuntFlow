@@ -2,7 +2,7 @@ const React = require('react');
 const MainLayout = require('./MainLayout');
 
 module.exports = function VacancyStages({
-  userName, currVacancy, candidateLength, stageName, children,
+  userName, currVacancy, candidateLength, allStagesByVacancy, stageName, children,
 }) {
   return (
     <MainLayout userName={userName}>
@@ -38,7 +38,7 @@ module.exports = function VacancyStages({
           <br />
           кандидата
         </a>
-        <a href="/">
+        {/* <a href="/">
           Новые
           <br />
           кандидаты
@@ -49,7 +49,7 @@ module.exports = function VacancyStages({
             {' '}
             <b>42</b>
           </span>
-        </a>
+        </a> */}
         <a className={stageName === 'stage1' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage1`}>
           Отправлено
           <br />
@@ -59,11 +59,11 @@ module.exports = function VacancyStages({
           <span>
             Завершено:
             {' '}
-            <b>7</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage1' && el.stage1).length}</b>
             <br />
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage1').length}</b>
           </span>
         </a>
         <a className={stageName === 'stage2' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage2`}>
@@ -75,11 +75,11 @@ module.exports = function VacancyStages({
           <span>
             Завершено:
             {' '}
-            <b>7</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage2' && el.stage2).length}</b>
             <br />
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage2').length}</b>
           </span>
         </a>
         <a className={stageName === 'stage3' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage3`}>
@@ -91,11 +91,11 @@ module.exports = function VacancyStages({
           <span>
             Завершено:
             {' '}
-            <b>7</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage3' && el.stage3).length}</b>
             <br />
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage3').length}</b>
           </span>
         </a>
         <a className={stageName === 'stage4' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage4`}>
@@ -107,11 +107,11 @@ module.exports = function VacancyStages({
           <span>
             Завершено:
             {' '}
-            <b>7</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage4' && el.stage4).length}</b>
             <br />
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage4').length}</b>
           </span>
         </a>
         <a className={stageName === 'stage5' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage5`}>
@@ -123,11 +123,11 @@ module.exports = function VacancyStages({
           <span>
             Завершено:
             {' '}
-            <b>7</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage5' && el.stage5).length}</b>
             <br />
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage5').length}</b>
           </span>
         </a>
         <a className={stageName === 'stage6' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage6`}>
@@ -137,11 +137,11 @@ module.exports = function VacancyStages({
           <span>
             Завершено:
             {' '}
-            <b>7</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage6' && el.stage6).length}</b>
             <br />
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage6').length}</b>
           </span>
         </a>
         <a className={stageName === 'stage7' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage7`}>
@@ -153,11 +153,11 @@ module.exports = function VacancyStages({
           <span>
             Завершено:
             {' '}
-            <b>7</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage7' && el.stage7).length}</b>
             <br />
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage7').length}</b>
           </span>
         </a>
         <a className={stageName === 'stage8' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage8`}>
@@ -165,7 +165,7 @@ module.exports = function VacancyStages({
           <span>
             Всего:
             {' '}
-            <b>42</b>
+            <b>{allStagesByVacancy.filter((el) => el.status === 'stage8').length}</b>
           </span>
         </a>
       </div>

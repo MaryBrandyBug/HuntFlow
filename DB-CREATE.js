@@ -209,16 +209,16 @@ const addVacancies = async () => {
 const addCandidates = async () => {
   try {
     await Candidate.create({
-      VacancyId: 2, name: 'Nikolay22', surname: 'Suhov1', middlename: 'Sergeevich1', email: 'nik1@mail.ru', phone: '89990988976', resume: 'resume', experience: '3 года', location: 'Moscow',
+      VacancyId: 2, name: '11Ni444kolay22', surname: 'Suh11ov1', middlename: 'Serg11eevich1', email: 'ni11k1@mail.ru', phone: '89990988976', resume: 'resume', experience: '3 года', location: 'Moscow',
     });
     await Candidate.create({
-      VacancyId: 2, name: 'Nikolay2234', surname: 'Sergeev11', middlename: 'Pavlovic1h', email: 'niko1l2@mail.ru', phone: '89990988890', resume: 'resume', experience: '4 года', location: 'Moscow',
+      VacancyId: 2, name: 'N444iko11lay2234', surname: 'Serg11eev11', middlename: 'Pavlo1111vic1h', email: 'niko111l2@mail.ru', phone: '89990988890', resume: 'resume', experience: '4 года', location: 'Moscow',
     });
     await Candidate.create({
-      VacancyId: 2, name: 'Anna11', surname: 'Frolo11va', middlename: 'Andreevna11', email: 'an111@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
+      VacancyId: 2, name: '22444Anna11111', surname: 'Frolo11111va', middlename: 'Andreev111na11', email: 'an111111@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
     });
     await Candidate.create({
-      VacancyId: 2, name: 'Bori12s', surname: 'Fok123in', middlename: 'Alexandro33ich', email: 'fok33@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
+      VacancyId: 2, name: '222Bor111i12s', surname: 'Fok11123in', middlename: 'Alexandr11o33ich', email: 'fok3113@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
     });
   } catch (error) {
     console.log(error);
@@ -228,7 +228,24 @@ const addCandidates = async () => {
 
 const addEntries = async () => {
   try {
-    await Entry.create({ CandidateId: 2, VacancyId: 1, status: 'stage5' });
+    await Entry.create({ VacancyId: 2, CandidateId: 3, status: 'stage1' });
+    await Entry.create({ VacancyId: 2, CandidateId: 4, status: 'stage2' });
+    await Entry.create({ VacancyId: 2, CandidateId: 17, status: 'stage3' });
+    await Entry.create({ VacancyId: 2, CandidateId: 18, status: 'stage4' });
+    await Entry.create({ VacancyId: 2, CandidateId: 19, status: 'stage5' });
+    await Entry.create({ VacancyId: 2, CandidateId: 20, status: 'stage6' });
+    await Entry.create({ VacancyId: 2, CandidateId: 21, status: 'stage7' });
+    await Entry.create({ VacancyId: 2, CandidateId: 22, status: 'stage8' });
+    await Entry.create({ VacancyId: 2, CandidateId: 23, status: 'stage1' });
+    await Entry.create({ VacancyId: 2, CandidateId: 24, status: 'stage2' });
+    await Entry.create({ VacancyId: 2, CandidateId: 25, status: 'stage3' });
+    await Entry.create({ VacancyId: 2, CandidateId: 26, status: 'stage4' });
+    await Entry.create({ VacancyId: 2, CandidateId: 27, status: 'stage5' });
+    await Entry.create({ VacancyId: 2, CandidateId: 28, status: 'stage6' });
+    await Entry.create({ VacancyId: 2, CandidateId: 29, status: 'stage7' });
+    await Entry.create({ VacancyId: 2, CandidateId: 30, status: 'stage7' });
+    await Entry.create({ VacancyId: 2, CandidateId: 31, status: 'stage2' });
+    await Entry.create({ VacancyId: 2, CandidateId: 32, status: 'stage2' });
   } catch (error) {
     console.log(error);
   }

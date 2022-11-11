@@ -29,7 +29,13 @@ router.get('/vacancy/:vacancyId', async (req, res) => {
     // console.log('currVacancy ===>', currVacancy.get());
     const candidates = await Candidate.findAll({ where: { VacancyId: +vacancyId } });
     // console.log('candidateLength ===>', candidates.length);
-    renderTemplate(VacancyStages, { userName, currVacancy, candidateLength: candidates.length }, res);
+
+    const allStagesByVacancy = await Entry.findAll({ where: { VacancyId: +vacancyId } });
+    // console.log('allStagesByVacancy ===>', allStagesByVacancy.map((el) => el.get()));
+
+    renderTemplate(VacancyStages, {
+      userName, currVacancy, candidateLength: candidates.length, allStagesByVacancy,
+    }, res);
   } catch (error) {
     console.log(error);
   }
@@ -43,18 +49,22 @@ router.get('/vacancy/:vacancyId/:stageName', async (req, res) => {
   console.log('===>', { vacancyId, stageName });
   try {
     const currVacancy = await Vacancy.findByPk(+vacancyId);
-    console.log('currVacancy ===>', currVacancy.get());
+    // console.log('currVacancy ===>', currVacancy.get());
+
     const candidates = await Candidate.findAll({ where: { VacancyId: +vacancyId } });
-    console.log('candidateLength ===>', candidates.length);
+    // console.log('candidateLength ===>', candidates.length);
+
+    const allStagesByVacancy = await Entry.findAll({ where: { VacancyId: +vacancyId } });
+    // console.log('allStagesByVacancy ===>', allStagesByVacancy.map((el) => el.get()));
 
     const stageCandidates = await Entry.findAll({
       where: { VacancyId: +vacancyId, status: stageName },
       include: { model: Candidate },
     });
-    console.dir(stageCandidates.map((el) => el.get({ plain: true })), { depth: null });
+    // console.dir(stageCandidates.map((el) => el.get({ plain: true })), { depth: null });
 
     renderTemplate(StageInfo, {
-      userName, currVacancy, candidateLength: candidates.length, stageName, stageCandidates,
+      userName, currVacancy, candidateLength: candidates.length, allStagesByVacancy, stageName, stageCandidates,
     }, res);
   } catch (error) {
     console.log(error);

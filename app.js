@@ -47,9 +47,9 @@ app.use('/', mainRegistration);
 app.use('/logout', logout);
 app.use('/main', mainRoute);
 app.use('/newvacancy', newVacancyRouter);
-app.use('/main', vacancyFormSubmit);
+app.use('/vacancy', vacancyFormSubmit);
 app.use('/newcandidate', newCandidateForm);
-app.use('.main', creatingCandidate);
+app.use('/candidate', creatingCandidate);
 
 app.listen(PORT, () => {
   console.log(`Server started at PORT: ${PORT}`);

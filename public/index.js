@@ -17,6 +17,7 @@ registrationForm?.addEventListener('submit', async (event) => {
     registrationForm.reset();
     const span = document.createElement('span');
     span.innerHTML = 'Ошибка регистрации';
+    span.style.color = '#D5DBDB';
     const regButton = document.querySelector('#Section2');
     regButton.appendChild(span);
   }
@@ -39,6 +40,7 @@ signInForm?.addEventListener('submit', async (event) => {
     signInForm.reset();
     const span = document.createElement('span');
     span.innerHTML = 'Ошибка входа';
+    span.style.color = '#D5DBDB';
     const errorPlace = document.querySelector('#Section1');
     errorPlace.appendChild(span);
   }

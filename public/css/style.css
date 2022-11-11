@@ -17,7 +17,7 @@ a:hover,a:focus{
  position: absolute;
  top: 0;
  left: 0;
- background: linear-gradient(#2e3a6a,#2f0b45);
+ background: linear-gradient(#4520ab,#4520af);
  opacity: 0.85;
 }
 .tab .nav-tabs{
@@ -162,4 +162,12 @@ a:hover,a:focus{
 .form-horizontal .forgot-pass .btn:hover{ color: #eec111; }
 @media only screen and (max-width: 479px){
  .tab{ padding: 40px 20px; }
+}
+
+main {
+  padding-top: 250px;
+}
+
+body {
+  background-color: #D5DBDB;
 }

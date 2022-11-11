@@ -1,10 +1,10 @@
 const React = require('react');
 const MainLayout = require('./MainLayout');
 
-module.exports = function newCandidate({ userName }) {
+module.exports = function newCandidate({ userName, findVac }) {
   return (
     <MainLayout userName={userName}>
-      <form method="POST" action="/main">
+      <form method="POST" action="/candidate">
         <div>
           <label htmlFor="">Имя</label>
           <input type="text" name="name" id="" required />
@@ -41,6 +41,7 @@ module.exports = function newCandidate({ userName }) {
           <label htmlFor="">Комментарий</label>
           <input type="text" name="comment" id="" />
         </div>
+        <input type="hidden" name="VacancyId" value={findVac.id} />
         <button type="submit">Добавить кандидата</button>
       </form>
     </MainLayout>

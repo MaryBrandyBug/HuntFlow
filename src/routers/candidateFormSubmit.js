@@ -22,6 +22,14 @@
 const router = require('express').Router();
 const { Vacancy, Candidate, Entry } = require('../../db/models');
 
+
+// router.post('/:vacId', async (req, res) => { //! не дописано!!!!!
+router.post('/:vacId', async (req, res) => {
+  const { vacId } = req.params;
+  // const vacId = 2;
+  const {
+    name, surname, middlename, email, phone, experience, resume, comment, location,
+
 router.post('/', async (req, res) => {
   console.log(req.body);
   const {

@@ -25,6 +25,9 @@ router.get('/:vacId', async (req, res) => {
   if (newUser) {
     const { vacId } = req.params;
     const findVac = await Vacancy.findByPk(+vacId);
+
+    renderTemplate(NewCandidateComponent, { newUser }, res);
+
     renderTemplate(NewCandidateComponent, { newUser, findVac }, res);
   } else {
     res.redirect('/');

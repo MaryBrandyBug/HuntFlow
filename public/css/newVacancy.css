@@ -17,7 +17,7 @@
   text-align: center;
   background-color: #2b0e7a;
   color: #e9e9ff;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   /* border-radius: 5px; */
 }
@@ -47,5 +47,19 @@
 .inputVacancy {
   font-size:30px;
   border-radius:6px;
+
  }
+
+ .inputKandidat{
+  margin: 5px 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size:15px;
+  border-radius:5px;
+ }
+
+ /* .fontNew {
+  font-size:20px;
+  border-radius:6px;
+ } */
  

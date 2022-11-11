@@ -1,0 +1,51 @@
+.logo-search {
+  margin-left: 10px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;  
+}
+
+.vacancyForma {
+  margin: 0;
+  width: 100%;
+  border-top: 2px solid #e9e9ff;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #2b0e7a;
+  color: #e9e9ff;
+  font-size: 25px;
+  font-weight: 700;
+  /* border-radius: 5px; */
+}
+
+/* .vacancyInput span {
+  font-size: 22px;
+  font-weight: 500;
+  
+} */
+
+.welcome {
+  color: dimgray;
+  height: 30px;
+  max-width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0 4px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #4520ab;
+  background-color: #e9e9ff;
+}
+
+.inputVacancy {
+  font-size:30px;
+  border-radius:6px;
+ }
+ 

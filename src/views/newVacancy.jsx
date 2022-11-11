@@ -4,17 +4,27 @@ const MainLayout = require('./MainLayout');
 module.exports = function newVacancy({ userName }) {
   return (
     <MainLayout userName={userName}>
-      <form method="POST" action="/main">
+      <link rel="stylesheet" href="/css/newVacancy.css" />
+      <form method="POST" action="/main" className="vacancyForma">
         <div>
+          <h2>Создание Новой Вакансии</h2>
+          <br />
           <label htmlFor="">Название вакансии</label>
-          <input type="text" name="title" id="" required />
+          <br />
+          <input type="text" name="title" id="" className="inputVacancy" required />
         </div>
+        <br />
         <div>
           <label htmlFor="">Название компании</label>
-          <input type="text" name="company" id="" required />
+          <br />
+          <input type="text" name="company" id="" className="inputVacancy" required />
         </div>
-        <button type="submit">Создать вакансию</button>
+        <br />
+        <button className="welcome" type="submit">Создать</button>
+        <br />
+        <br />
       </form>
     </MainLayout>
   );
 };
+

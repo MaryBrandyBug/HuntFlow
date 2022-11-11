@@ -1,41 +1,45 @@
-const nodemailer = require('nodemailer');
+require('@babel/register');
+const multer = require('multer');
 const express = require('express');
+const morgan = require('morgan');
+
+const renderTemplate = require('./lib/renderTemplate');
+
+const Layout = require('./views/Layout');
+
+const app = express();
+
+app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+  renderTemplate(Layout, null, res);
+});
+
+//* Настройка и проверка загрузки
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
+  },
+});
 
 
+const uploadStorage = multer({ storage });
 
-function sendEmail(to) {
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-   
-    auth: {
-      user: 'sende.mail.function@gmail.com', // process.env.email,
-      pass: 'jbysumyjjsvgidsz', // process.env.password
-    },
-  });
+// * Скачать один файл
+app.post('/upload/single', uploadStorage.single('image'), (req, res) => {
+  console.log(req.file);
+  return res.send('Single file');
+});
 
-  const mailOptions = {
-    from: 'sende.mail.function@gmail.com',
-    to: to, // емайл адреса получателей
-    subject: 'Вы выбраны', // заголовок
-    text: 'Приглашение кандидата', // заголовок
-  };
+app.listen(PORT, () => {
+  console.log('Сервер фурычит');
+});
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log(`Email sent: ${info.response}`);
-    }
-  });
-}
-
-sendEmail('bull323@mail.ru')
-
-
-// ? блок со строкой если послать html документ
-// const mailOptions = {
-//   from: 'sende.mail.function@gmail.com',
-//   to: to, // емайл адреса получателей
-//   subject: 'Пробуем HTML ',
-//   html: '<h1>Welcome</h1><p>That was easy!</p>'
-// };
+// ? скачивает и картинки и pdf

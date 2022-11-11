@@ -4,7 +4,6 @@ const NewVacancyComponent = require('../views/newVacancy');
 
 router.get('/', async (req, res) => {
   const userName = req.session?.newUser;
-
   if (userName) {
     renderTemplate(NewVacancyComponent, { userName }, res);
   } else {

@@ -1,7 +1,7 @@
 .logo-search {
   margin-left: 10px;
   height: 40px;
-  background-color: white;
+  background-color: linear-gradient(#8989c8,#D5DBDB);;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -15,11 +15,11 @@
   border-top: 2px solid #e9e9ff;
   padding: 10px 0;
   text-align: center;
-  background-color: #2b0e7a;
-  color: #e9e9ff;
+  background-color: linear-gradient(#8989c8,#cbd1d1);;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 700;
-  /* border-radius: 5px; */
+  border-radius: 30px;
 }
 
 /* .vacancyInput span {
@@ -46,7 +46,7 @@
 
 .inputVacancy {
   font-size:30px;
-  border-radius:6px;
+  border-radius:30px;
 
  }
 
@@ -55,7 +55,9 @@
   margin-left: auto;
   margin-right: auto;
   font-size:15px;
-  border-radius:5px;
+  border-radius:15px;
+  width: 300px;
+  height: 30px;
  }
 
  /* .fontNew {
@@ -63,3 +65,36 @@
   border-radius:6px;
  } */
  
+ .divInput {
+  margin-top: 20px;
+ }
+
+ form {
+  background: linear-gradient(#8989c8,#dadaf4);
+ }
+
+ #commentInput {
+  height: 80px;
+ }
+
+ label {
+  color: white
+ }
+
+ #canBtn {
+  background-color: #eee14d;
+  width: 150px;
+  height: 45px;
+  border-radius: 12px;
+  border-color: white;
+  font-family:Arial, Helvetica, sans-serif;
+ }
+
+ #vacBtn {
+  background-color: #eee14d;
+  width: 120px;
+  height: 35px;
+  border-radius: 12px;
+  border-color: white;
+  font-family:Arial, Helvetica, sans-serif;
+ }

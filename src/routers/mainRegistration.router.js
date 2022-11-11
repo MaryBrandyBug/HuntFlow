@@ -5,11 +5,11 @@ const renderTemplate = require('../lib/renderTemplate');
 const { User } = require('../../db/models');
 
 router.get('/', (req, res) => {
-  const newUser = req.session?.newUser;
-  if (newUser) {
+  const userName = req.session?.newUser;
+  if (userName) {
     res.redirect('/main');
   } else {
-    renderTemplate(MainComponent, { newUser }, res);
+    renderTemplate(MainComponent, { userName }, res);
   }
 });
 

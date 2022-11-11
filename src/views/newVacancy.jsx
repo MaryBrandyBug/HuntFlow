@@ -20,7 +20,7 @@ module.exports = function newVacancy({ userName }) {
           <input type="text" name="company" id="" className="inputVacancy" required />
         </div>
         <br />
-        <button className="welcome" type="submit">Создать</button>
+        <button className="welcome" type="submit" id="vacBtn">Создать</button>
         <br />
         <br />
       </form>

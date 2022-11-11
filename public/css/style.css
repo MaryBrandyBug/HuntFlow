@@ -17,7 +17,7 @@ a:hover,a:focus{
  position: absolute;
  top: 0;
  left: 0;
- background: linear-gradient(#2e3a6a,#2f0b45);
+ background: linear-gradient(#4520ab,#4520ab);
  opacity: 0.85;
 }
 .tab .nav-tabs{
@@ -166,4 +166,8 @@ a:hover,a:focus{
 
 body {
   background-color: #D5DBDB;
+}
+
+main {
+  padding-top: 250px;
 }

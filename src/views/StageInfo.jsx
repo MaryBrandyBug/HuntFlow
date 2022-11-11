@@ -6,14 +6,14 @@ module.exports = function StageInfo({
 }) {
   return (
     <VacancyStages userName={userName} currVacancy={currVacancy} candidateLength={candidateLength} allStagesByVacancy={allStagesByVacancy} stageName={stageName}>
-      {/* <script defer src="./js/register.js" /> */}
+      <script defer src="/js/editCandidate.js" />
 
       <div className="vacancy-stage">
         <div className="candidate-list">
 
           {stageCandidates.filter((el) => !el[stageName])
             .map((el) => (
-              <div>
+              <div key={el.id} data-candidate-id={el.Candidate.id} data-stage-name={el.status} data-stage-status={`${el[el.status]}`}>
                 <p><b>{`${el.Candidate.name} ${el.Candidate.surname}`}</b></p>
                 <p>{currVacancy.title}</p>
                 <p>{currVacancy.company}</p>
@@ -31,7 +31,7 @@ module.exports = function StageInfo({
 
           {stageCandidates.filter((el) => el[stageName])
             .map((el) => (
-              <div>
+              <div key={el.id} data-candidate-id={el.Candidate.id} data-stage-name={el.status} data-stage-status={`${el[el.status]}`}>
                 <p><b>{`${el.Candidate.name} ${el.Candidate.surname}`}</b></p>
                 <p>{currVacancy.title}</p>
                 <p>{currVacancy.company}</p>

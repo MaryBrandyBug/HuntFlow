@@ -5,11 +5,11 @@ const renderTemplate = require('../lib/renderTemplate');
 const { User } = require('../../db/models');
 
 router.get('/', (req, res) => {
-  const newUser = req.session?.newUser;
-  if (newUser) {
+  const userName = req.session?.newUser;
+  if (userName) {
     res.redirect('/main');
   } else {
-    renderTemplate(MainComponent, { newUser }, res);
+    renderTemplate(MainComponent, { userName }, res);
   }
 });
 
@@ -40,6 +40,7 @@ router.post('/', async (req, res) => {
         const passCheck = await bcrypt.compare(enterPassword, user.password);
         if (passCheck) {
           req.session.newUser = user.name;
+          console.log(req.session.newUser);
           req.session.userId = user.id;
           req.session.save(() => {
             res.json({ status: 'okey ' });

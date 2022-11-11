@@ -8,7 +8,7 @@
 body {
   margin: 0;
   min-width: 1600px;
-  background-color:#e9e9ff;
+  background-color:#dadaf4;
 }
 
 a {
@@ -22,7 +22,7 @@ a {
 .navbar {
   width: 100%;
   height: 56px;
-  background-color: #4520ab;
+  background-color: #7c7cc4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -188,7 +188,7 @@ a {
   border-bottom: 2px solid #e9e9ff;
   padding: 10px 0;
   text-align: center;
-  background-color: #2b0e7a;
+  background-color: #a2a2e3;
   color: #e9e9ff;
   line-height: 1.25;
   font-size: 20px;
@@ -212,7 +212,7 @@ a {
   height: 120px;
   padding: 10px;
   font-weight: 700;
-  border-top: 3px solid #4520ab;
+  border-top: 3px solid #e9e9ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,7 +227,7 @@ a {
 
 .vacancy-stage-navbar a:not(.active-stage) {
   color: #e9e9ff;
-  background-color: #4520ab;
+  background-color: #7c7cc4;
 }
 
 .active-stage {
@@ -240,11 +240,11 @@ a {
 }
 
 .vacancy-stage-navbar > a:first-child {
-  border-left: 3px solid #4520ab;
+  border-left: 3px solid #e9e9ff;
 }
 
 .vacancy-stage-navbar > a:last-child {
-  border-right: 3px solid #4520ab;
+  border-right: 3px solid #e9e9ff;
 }
 
 /* ################################## */
@@ -257,8 +257,8 @@ a {
   border-top: 2px solid #e9e9ff;
   padding: 10px 0;
   text-align: center;
-  background-color: #2b0e7a;
-  color: #e9e9ff;
+  background-color: #a2a2e3;
+  color: #fbfbfb;
   font-size: 25px;
   font-weight: 700;
 }
@@ -273,7 +273,7 @@ a {
   width: 100%;
   border-top: 2px solid #e9e9ff;
   padding: 10px 0;
-  background-color: #4520ab;
+  background-color: #7373ad;
   display: flex;
   justify-content: center;
   align-items: center;

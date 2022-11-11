@@ -1,0 +1,100 @@
+.logo-search {
+  margin-left: 10px;
+  height: 40px;
+  background-color: linear-gradient(#8989c8,#D5DBDB);;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;  
+}
+
+.vacancyForma {
+  margin: 0;
+  width: 100%;
+  border-top: 2px solid #e9e9ff;
+  padding: 10px 0;
+  text-align: center;
+  background-color: linear-gradient(#8989c8,#cbd1d1);;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+/* .vacancyInput span {
+  font-size: 22px;
+  font-weight: 500;
+  
+} */
+
+.welcome {
+  color: dimgray;
+  height: 30px;
+  max-width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0 4px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #4520ab;
+  background-color: #e9e9ff;
+}
+
+.inputVacancy {
+  font-size:30px;
+  border-radius:30px;
+
+ }
+
+ .inputKandidat{
+  margin: 5px 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size:15px;
+  border-radius:15px;
+  width: 300px;
+  height: 30px;
+ }
+
+ /* .fontNew {
+  font-size:20px;
+  border-radius:6px;
+ } */
+ 
+ .divInput {
+  margin-top: 20px;
+ }
+
+ form {
+  background: linear-gradient(#8989c8,#dadaf4);
+ }
+
+ #commentInput {
+  height: 80px;
+ }
+
+ label {
+  color: white
+ }
+
+ #canBtn {
+  background-color: #eee14d;
+  width: 150px;
+  height: 45px;
+  border-radius: 12px;
+  border-color: white;
+  font-family:Arial, Helvetica, sans-serif;
+ }
+
+ #vacBtn {
+  background-color: #eee14d;
+  width: 120px;
+  height: 35px;
+  border-radius: 12px;
+  border-color: white;
+  font-family:Arial, Helvetica, sans-serif;
+ }

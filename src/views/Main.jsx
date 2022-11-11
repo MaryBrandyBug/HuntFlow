@@ -12,6 +12,7 @@ module.exports = function Main({ newUser }) {
             <p>Hello!</p>
           )
           : (
+            <main>
             <div>
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
               <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" />
@@ -67,6 +68,7 @@ module.exports = function Main({ newUser }) {
                 </div>
               </div>
             </div>
+            </main>
           )}
         <script defer src="/index.js" />
       </div>

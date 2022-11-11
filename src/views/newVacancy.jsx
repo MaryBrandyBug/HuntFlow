@@ -3,7 +3,7 @@ const MainLayout = require('./MainLayout');
 
 module.exports = function newVacancy({ userName }) {
   return (
-    <MainLayout newUser={userName}>
+    <MainLayout userName={userName}>
       <form method="POST" action="/main">
         <div>
           <label htmlFor="">Название вакансии</label>

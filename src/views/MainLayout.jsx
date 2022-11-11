@@ -1,13 +1,13 @@
 const React = require('react');
 
-module.exports = function Layout({ userName, children }) {
+module.exports = function MainLayout({ userName, children }) {
   return (
     <html lang="ru">
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="/css/index.css" />
         <title>HuntFlow</title>
       </head>
 
@@ -16,7 +16,7 @@ module.exports = function Layout({ userName, children }) {
         <nav className="navbar">
           <form className="logo-search">
             <button type="submit">
-              <img src="./images/search.gif" alt="search" />
+              <img src="/images/search.gif" alt="search" />
               HuntFlow
             </button>
             <input type="search" name="logo-search" placeholder="Найти вакансию..." required />

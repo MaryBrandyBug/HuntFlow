@@ -26,7 +26,7 @@ module.exports = function MainLayout({ userName, children }) {
             Список моих вакансий
           </a>
           <p className="separator">||</p>
-          <a className="nav-link" href="/">
+          <a className="nav-link" href="/newvacancy">
             Создать новую вакансию
           </a>
           <p className="separator">||</p>
@@ -35,7 +35,7 @@ module.exports = function MainLayout({ userName, children }) {
             <a className="welcome" href="/">
               {userName}
             </a>
-            <a className="logout" href="/">
+            <a className="logout" href="/logout">
               Выйти
             </a>
           </div>

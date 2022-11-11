@@ -1,7 +1,9 @@
 const React = require('react');
 const MainLayout = require('./MainLayout');
 
-module.exports = function VacancyStages({ userName, currVacancy, candidateLength }) {
+module.exports = function VacancyStages({
+  userName, currVacancy, candidateLength, stageName, children,
+}) {
   return (
     <MainLayout userName={userName}>
       {/* <script defer src="./js/register.js" /> */}
@@ -48,7 +50,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage1' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage1`}>
           Отправлено
           <br />
           письмо-
@@ -64,7 +66,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage2' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage2`}>
           Назначен
           <br />
           звонок-
@@ -80,7 +82,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage3' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage3`}>
           Назначено
           <br />
           видео-
@@ -96,7 +98,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage4' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage4`}>
           Резюме
           <br />
           передано
@@ -112,7 +114,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage5' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage5`}>
           Назначено
           <br />
           интервью
@@ -128,7 +130,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage6' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage6`}>
           Выставлен
           <br />
           оффер
@@ -142,7 +144,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage7' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage7`}>
           Приняли
           <br />
           оффер и вышли
@@ -158,7 +160,7 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
             <b>42</b>
           </span>
         </a>
-        <a href="/">
+        <a className={stageName === 'stage8' ? 'active-stage' : ''} href={`/main/vacancy/${currVacancy.id}/stage8`}>
           Отказы
           <span>
             Всего:
@@ -167,6 +169,8 @@ module.exports = function VacancyStages({ userName, currVacancy, candidateLength
           </span>
         </a>
       </div>
+
+      {children}
 
     </MainLayout>
   );

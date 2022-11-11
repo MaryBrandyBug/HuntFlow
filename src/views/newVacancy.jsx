@@ -5,7 +5,7 @@ module.exports = function newVacancy({ userName }) {
   return (
     <MainLayout userName={userName}>
       <link rel="stylesheet" href="/css/newVacancy.css" />
-      <form method="POST" action="/main" className="vacancyForma">
+      <form method="POST" action="/vacancy" className="vacancyForma">
         <div>
           <h2>Создание Новой Вакансии</h2>
           <br />

@@ -22,6 +22,7 @@ const mainRoute = require('./src/routers/mainRoute');
 const newVacancyRouter = require('./src/routers/newVacancyRouter');
 const vacancyFormSubmit = require('./src/routers/vacancyFormSubmit');
 const newCandidateForm = require('./src/routers/newCandidateForm');
+const creatingCandidate = require('./src/routers/candidateFormSubmit');
 
 app.use(logger('dev')); // !!! 'dev' - параметр, отвечающий за стиль отображения информации logger'ом (ещё есть 'short' и 'tiny')
 app.use(express.json()); // !!! Для расшифровки запросов
@@ -48,6 +49,7 @@ app.use('/main', mainRoute);
 app.use('/newvacancy', newVacancyRouter);
 app.use('/main', vacancyFormSubmit);
 app.use('/newcandidate', newCandidateForm);
+app.use('.main', creatingCandidate);
 
 app.listen(PORT, () => {
   console.log(`Server started at PORT: ${PORT}`);

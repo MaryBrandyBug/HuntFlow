@@ -4,7 +4,7 @@ const MainLayout = require('./MainLayout');
 module.exports = function newCandidate({ userName }) {
   return (
     <MainLayout userName={userName}>
-      <form method="POST" action="/newcandidate">
+      <form method="POST" action="/main">
         <div>
           <label htmlFor="">Имя</label>
           <input type="text" name="name" id="" required />
@@ -39,7 +39,7 @@ module.exports = function newCandidate({ userName }) {
         </div>
         <div>
           <label htmlFor="">Комментарий</label>
-          <input type="text" name="comment" id="" required />
+          <input type="text" name="comment" id="" />
         </div>
         <button type="submit">Добавить кандидата</button>
       </form>

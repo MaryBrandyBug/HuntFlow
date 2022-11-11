@@ -1,11 +1,11 @@
-const ReactDOMServer = require('react-dom/server');
+require('@babel/register');
+
 const React = require('react');
+const ReactDOMServer = require('react-dom/server');
 
-const renderTemplate = (component, props, response) => {
-  const reactElement = React.createElement(component, props);
-
-  const html = ReactDOMServer.renderToStaticMarkup(reactElement);
-
+const renderTemplate = (reactElement, properties, response) => {
+  const reactEl = React.createElement(reactElement, properties);
+  const html = ReactDOMServer.renderToStaticMarkup(reactEl);
   response.write('<!DOCTYPE html>');
   response.end(html);
 };

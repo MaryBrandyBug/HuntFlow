@@ -6,7 +6,11 @@ const { User } = require('../../db/models');
 
 router.get('/', (req, res) => {
   const newUser = req.session?.newUser;
-  renderTemplate(MainComponent, { newUser }, res);
+  if (newUser) {
+    res.redirect('/main');
+  } else {
+    renderTemplate(MainComponent, { newUser }, res);
+  }
 });
 
 router.post('/', async (req, res) => {
@@ -18,6 +22,7 @@ router.post('/', async (req, res) => {
         const hash = await bcrypt.hash(password, 10);
         const newUser = await User.create({ email, name, password: hash });
         req.session.newUser = newUser.name;
+        req.session.userId = newUser.id;
         req.session.save(() => {
           res.json({ status: 'ok' });
         });
@@ -35,6 +40,8 @@ router.post('/', async (req, res) => {
         const passCheck = await bcrypt.compare(enterPassword, user.password);
         if (passCheck) {
           req.session.newUser = user.name;
+          console.log(req.session.newUser);
+          req.session.userId = user.id;
           req.session.save(() => {
             res.json({ status: 'okey ' });
           });

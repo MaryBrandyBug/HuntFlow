@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>HuntFlow</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <form class="logo-search">
+      <button type="submit">
+        <img src="search.gif" alt="search">
+        HuntFlow
+      </button>
+      <input type="search" name="logo-search" placeholder="Найти вакансию..." required>
+    </form>
+    <!-- <p class="fill"></p> -->
+    <p class="separator">||</p>
+    <a class="nav-link" href="/">
+      Список моих вакансий
+    </a>
+    <p class="separator">||</p>
+    <a class="nav-link" href="/">
+      Создать новую вакансию
+    </a>
+    <p class="separator">||</p>
+    <p class="fill"></p>
+    <div class="nav-right">
+      <a class="welcome" href="/">
+        Гость Анонимович
+      </a>
+      <a class="logout" href="/">
+        Выйти
+      </a>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <div class="vacancy-title">
+    Вакансия <b>"JavaScript-разработчик"</b>
+    <br>
+    в компанию "Elbrus Bootcamp"
+    <br>
+    Всего кандидатов: <b>42</b> &nbsp;||&nbsp;
+    Дата создания: <b>09.11.2022</b>
+  </div>
+  
+
+  <div class="vacancy-stage-navbar">
+    <a href="/">
+      Добавить<br>кандидата      
+    </a>
+    <a href="/">
+      Новые<br>кандидаты<br>(за неделю)
+      <span>Всего: <b>42</b></span>
+    </a>
+    <a href="/">
+      Отправлено<br>письмо-<br>приглашение
+      <span>
+        Завершено: <b>7</b>
+        <br/>
+        Всего: <b>42</b>
+      </span>
+    </a>
+    <a href="/">
+      Назначен<br>звонок-<br>скрининг
+      <span>
+        Завершено: <b>7</b>
+        <br/>
+        Всего: <b>42</b>
+      </span>
+    </a>
+    <a href="/">
+      Назначено<br>видео-<br>интервью
+      <span>
+        Завершено: <b>7</b>
+        <br/>
+        Всего: <b>42</b>
+      </span>
+    </a>
+    <a class="active-stage" href="/">
+      Резюме<br>передано<br>заказчику
+      <span>
+        Завершено: <b>7</b>
+        <br/>
+        Всего: <b>42</b>
+      </span>
+    </a>
+    <a href="/">
+      Назначено<br>интервью<br>с заказчиком
+      <span>
+        Завершено: <b>7</b>
+        <br/>
+        Всего: <b>42</b>
+      </span>
+    </a>
+    <a href="/">
+      Выставлен<br>оффер
+      <span>
+        Завершено: <b>7</b>
+        <br/>
+        Всего: <b>42</b>
+      </span>
+    </a>
+    <a href="/">
+      Приняли<br>оффер и вышли<br>на работу
+      <span>
+        Завершено: <b>7</b>
+        <br/>
+        Всего: <b>42</b>
+      </span>
+    </a>
+    <a href="/">
+      Отказы
+      <span>Всего: <b>42</b></span>
+    </a>
+  </div>
+
+  <div class="vacancy-stage">
+
+    <div class="candidate-list">      
+      <div>
+        <p><b>Фамилия Имя</b></p>
+        <p>JavaScript-разработчик</p>
+        <p>Elbrus Bootcamp</p>
+        <p>Статус этапа: <b>не пройден</b></p>
+      </div>
+      <div class="active">
+        <p><b>Фамилия Имя</b></p>
+        <p>JavaScript-разработчик</p>
+        <p>Elbrus Bootcamp</p>
+        <p>Статус этапа: <b>не пройден</b></p>
+      </div>
+      <div>
+        <p><b>Фамилия Имя</b></p>
+        <p>JavaScript-разработчик</p>
+        <p>Elbrus Bootcamp</p>
+        <p>Статус этапа: <b>не пройден</b></p>
+      </div>
+      <div>
+        <p><b>Фамилия Имя</b></p>
+        <p>JavaScript-разработчик</p>
+        <p>Elbrus Bootcamp</p>
+        <p>Статус этапа: <b>не пройден</b></p>
+      </div>
+      <div>
+        <p><b>Фамилия Имя</b></p>
+        <p>JavaScript-разработчик</p>
+        <p>Elbrus Bootcamp</p>
+        <p>Статус этапа: <b>не пройден</b></p>
+      </div>
+    </div>
+
+    <div class="candidate-card">
+      <div class="candidate-info">
+        
+        <div class="info">
+
+          <div>
+            <div class="bio">
+              <div><p class="name">Ф. <span id="surname">Фамилия</span></p></div>
+              <div><p class="name">И. <span id="name">Имя</span></p></div>
+              <div><p class="name">О. <span id="middlename">Отчество</span></p></div>
+              <div><p>Телефон <span id="phone">+7 (987) 123-45-67</span></p></div>
+              <div><p>Эл. почта <span id="email">mail@mail.ru</span></p></div>
+              <div><p>Опыт работы <span id="experience">7 лет 5 месяцев</span></p></div>
+              <div><p>Проживает <span id="resident">Московская область</span></p></div> 
+              <button type="button" name="bio">Изменить данные</button>
+            </div>
+          </div>
+
+          <div>
+            <form class="bio">
+              <div><p class="name">Ф.</p><input name="surname" value="Фамилия"></input></div>
+              <div><p class="name">И.</p><input name="name" value="Имя"></input></div>
+              <div><p class="name">О.</p><input name="middlename" value="Отчество"></input></div>
+              <div><p>Телефон</p><input name="phone" value="+7 (987) 123-45-67"></input></div>
+              <div><p>Эл. почта</p><input name="email" value="mail@mail.ru"></input></div>
+              <div><p>Опыт работы</p><input name="experience" value="7 лет 5 месяцев"></input></p></div>
+              <div><p>Проживает</p><input name="resident" value="Московская область"></input></div>
+              <button type="button" name="bio">Сохранить данные</button>
+            </form>
+          </div>
+
+          <div class="stage-status">
+
+            <div class="stage-status-block">
+              <div>
+                <h3>Текущий этап:</h3>
+                <p>Назначено интервью с заказчиком</p>
+              </div>
+  
+              <div>
+                <h3>Дата назначенного события:</h3>
+                <!-- <div class="stage-date">
+                  <p>11.15.2022, 12:50</p>
+                  <button>Изменить</button>
+                </div> -->
+                <div class="stage-date">
+                  <input name='datetime' type="datetime-local" required>
+                  <button type="submit">Сохранить</button>
+                </div>
+              </div>
+  
+              <div>
+                <h3>Статус этапа:</h3>
+                <div class="stage-status-button">
+                  <p class="green">пройден</p>
+                  <button>Изменить</button>
+                </div>
+              </div>
+
+              <!-- <div>
+                <h3>Статус этапа:</h3>
+                <div class="stage-status-button">
+                  <p class="red">не пройден</p>
+                  <button>Изменить</button>
+                </div>
+              </div> -->
+            </div>
+            
+            <button type="button" name="bio">Перевести кандидата на другой этап</button>
+
+          </div>
+
+
+          <div class="stage-status">
+
+            <div class="stage-status-block">
+              <div>
+                <h3>Текущий этап:</h3>
+                <p>Назначено интервью с заказчиком</p>
+              </div>
+  
+              <div>
+                <h3>Дата назначенного события:</h3>
+                <div class="stage-date">
+                  <p>11.15.2022, 12:50</p>
+                  <button>Изменить</button>
+                </div>
+                <!-- <div class="stage-date">
+                  <input name='datetime' type="datetime-local">
+                  <button>Сохранить</button>
+                </div> -->
+              </div>
+  
+              <!-- <div>
+                <h3>Статус этапа:</h3>
+                <div class="stage-status-button">
+                  <p class="green">пройден</p>
+                  <button>Изменить</button>
+                </div>
+              </div> -->
+
+              <div>
+                <h3>Статус этапа:</h3>
+                <div class="stage-status-button">
+                  <p class="red">не пройден</p>
+                  <button>Изменить</button>
+                </div>
+              </div>
+            </div>
+            
+            <button type="button" name="bio">Перевести кандидата на другой этап</button>
+
+          </div>
+
+
+          <div class="stage-status">
+            <form class="">
+
+              <div class="stage-status-block">
+                <div class="edit-stage">
+
+                  <h3>Выбрать этап:</h3> 
+                  <div class="set-stage">
+                    <div class="stage-radio">
+                      <h4>Отправлено письмо-приглашение</h4>
+                      <input type="radio" data-stage-id="1" name="stage-radio" required/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Назначен звонок-скрининг</h4>
+                      <input type="radio" data-stage-id="2" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4 class="active">Назначено видеоинтервью</h4>
+                      <input type="radio" data-stage-id="3" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Резюме передано заказчику</h4>
+                      <input type="radio" data-stage-id="4" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Назначено интервью с заказчиком</h4>
+                      <input type="radio" data-stage-id="5" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Выставлен оффер</h4>
+                      <input type="radio" data-stage-id="6" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Оффер принят. Выход на работу</h4>
+                      <input type="radio" data-stage-id="7" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Отказ</h4>
+                      <input type="radio" data-stage-id="8" name="stage-radio"/>
+                    </div>
+                  </div>
+  
+                  <!-- <div class="set-datetime">
+                    <h3>Выбрать дату назначенного события:</h3>
+                    <input name='datetime' type="datetime-local" required>
+                  </div> -->
+
+                </div>
+
+              </div>
+
+              <button type="submit" name="bio">Сохранить изменения</button>
+
+            </form>
+          </div>
+
+          <div class="stage-status">
+            <form class="">
+
+              <div class="stage-status-block">
+                <div class="edit-stage">
+
+                  <h3>Выбрать этап:</h3> 
+                  <div class="set-stage">
+                    <div class="stage-radio">
+                      <h4>Отправлено письмо-приглашение</h4>
+                      <input type="radio" data-stage-id="1" name="stage-radio" required/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Назначен звонок-скрининг</h4>
+                      <input type="radio" data-stage-id="2" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4 class="active">Назначено видеоинтервью</h4>
+                      <input type="radio" data-stage-id="3" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Резюме передано заказчику</h4>
+                      <input type="radio" data-stage-id="4" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Назначено интервью с заказчиком</h4>
+                      <input type="radio" data-stage-id="5" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Выставлен оффер</h4>
+                      <input type="radio" data-stage-id="6" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Оффер принят. Выход на работу</h4>
+                      <input type="radio" data-stage-id="7" name="stage-radio"/>
+                    </div>
+                    <div class="stage-radio">
+                      <h4>Отказ</h4>
+                      <input type="radio" data-stage-id="8" name="stage-radio"/>
+                    </div>
+                  </div>
+  
+                  <div class="set-datetime">
+                    <h3>Выбрать дату назначенного события:</h3>
+                    <input name='datetime' type="datetime-local" required>
+                  </div>
+
+                </div>
+
+              </div>
+              
+              <button type="submit" name="bio">Сохранить изменения</button>
+
+            </form>
+          </div>
+
+
+
+          <div class="comment">
+            <h3>Комментарии:</h3>
+            <div class="comment-list">
+              <p>aaa</p><p>bbb</p><p>ccc</p>
+              <p>aaa</p><p>bbb</p><p>ccc</p>
+              <p>aaa</p><p>bbb</p><p>ccc</p>
+            </div>
+            <form class="">
+              <input type="text" name="" required/>
+              <button type="submit" name="bio">Добавить комментарий</button>
+            </form>
+          </div>
+
+
+
+
+
+        </div>
+
+        <object class="resume">
+          <embed src ="001.pdf" type ="application/pdf" />
+        </object>
+
+      </div>
+    </div>
+
+  </div>
+
+  </main>
+  
+</body>
+</html>

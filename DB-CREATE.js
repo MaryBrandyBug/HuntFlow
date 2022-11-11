@@ -182,133 +182,55 @@ const dbConnectCheck = async () => {
 };
 dbConnectCheck();
 
-// // заполняем юзеров
-// const addUsers = async () => {
-//   try {
-//     await User.create({ name: 'Name-1', password: '111', email: 'name1@mail.ru' });
-//     await User.create({ name: 'Name-2', password: '111', email: 'name2@mail.ru' });
-//     await User.create({ name: 'Name-3', password: '111', email: 'name3@mail.ru' });
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
+const addUsers = async () => {
+  try {
+    await User.create({ name: 'Name-1', password: '111', email: 'name1@mail.ru' });
+    await User.create({ name: 'Name-2', password: '111', email: 'name2@mail.ru' });
+    await User.create({ name: 'Name-3', password: '111', email: 'name3@mail.ru' });
+  } catch (error) {
+    console.log(error);
+  }
+};
 // addUsers();
 
-// // заполняем вакансии
-// const addVacancy1 = async () => {
-//   try {
-//     const result = await Vacancy.create({ title: 'Frontend-Developer junior', company: 'google', UserId: 1 });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addVacancy1();
+const addVacancies = async () => {
+  try {
+    await Vacancy.create({ title: 'Frontend-Developer3 junior', company: 'google', UserId: 1 });
+    await Vacancy.create({ title: 'Frontend-Developer1 senior', company: 'яндекс', UserId: 2 });
+    await Vacancy.create({ title: 'Frontend-Developer123 senior', company: 'яндекс', UserId: 2 });
+    await Vacancy.create({ title: 'Frontend-Developer222 senior', company: 'яндекс', UserId: 2 });
+    await Vacancy.create({ title: 'Frontend-Developer33 senior', company: 'яндекс', UserId: 2 });
+  } catch (error) {
+    console.log(error);
+  }
+};
+// addVacancies();
 
-// const addVacancy2 = async () => {
-//   try {
-//     const result = await Vacancy.create({ title: 'Frontend-Developer senior', company: 'яндекс', UserId: 2 });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addVacancy2();
+const addCandidates = async () => {
+  try {
+    await Candidate.create({
+      VacancyId: 2, name: 'Nikolay22', surname: 'Suhov1', middlename: 'Sergeevich1', email: 'nik1@mail.ru', phone: '89990988976', resume: 'resume', experience: '3 года', location: 'Moscow',
+    });
+    await Candidate.create({
+      VacancyId: 2, name: 'Nikolay2234', surname: 'Sergeev11', middlename: 'Pavlovic1h', email: 'niko1l2@mail.ru', phone: '89990988890', resume: 'resume', experience: '4 года', location: 'Moscow',
+    });
+    await Candidate.create({
+      VacancyId: 2, name: 'Anna11', surname: 'Frolo11va', middlename: 'Andreevna11', email: 'an111@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
+    });
+    await Candidate.create({
+      VacancyId: 2, name: 'Bori12s', surname: 'Fok123in', middlename: 'Alexandro33ich', email: 'fok33@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+// addCandidates();
 
-// // заполняем кандидатов
-// const addCandidate1 = async () => {
-//   try {
-//     const result = await Candidate.create({
-//       VacancyId: 1, name: 'Nikolay', surname: 'Suhov', middlename: 'Sergeevich', email: 'nik@mail.ru', phone: '89990988976', resume: 'resume', experience: '3 года', location: 'Moscow',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addCandidate1();
-
-// const addCandidate2 = async () => {
-//   try {
-//     const result = await Candidate.create({
-//       VacancyId: 1, name: 'Nikolay', surname: 'Sergeev', middlename: 'Pavlovich', email: 'nikol@mail.ru', phone: '89990988890', resume: 'resume', experience: '4 года', location: 'Moscow',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addCandidate2();
-
-// const addCandidate3 = async () => {
-//   try {
-//     const result = await Candidate.create({
-//       VacancyId: 2, name: 'Anna', surname: 'Frolova', middlename: 'Andreevna', email: 'an@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addCandidate3();
-
-// const addCandidate4 = async () => {
-//   try {
-//     const result = await Candidate.create({
-//       VacancyId: 2, name: 'Boris', surname: 'Fokin', middlename: 'Alexandrovich', email: 'fok@mail.ru', phone: '89990988845', resume: 'resume', experience: '2 года', location: 'Moscow',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addCandidate4();
-
-// // заполняем записи
-// const addEntry1 = async () => {
-//   try {
-//     const result = await Entry.create({
-//       CandidateId: 2, VacancyId: 1, status: 'stage5',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addEntry1();
-
-// const addEntry2 = async () => {
-//   try {
-//     const result = await Entry.create({
-//       CandidateId: 2, VacancyId: 1, status: 'stage5',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addEntry2();
-
-// const addEntry3 = async () => {
-//   try {
-//     const result = await Entry.create({
-//       CandidateId: 3, VacancyId: 2, status: 'stage3',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addEntry3();
-
-// const addEntry4 = async () => {
-//   try {
-//     const result = await Entry.create({
-//       CandidateId: 4, VacancyId: 2, status: 'stage2',
-//     });
-//     return result;
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-// };
-// addEntry4();
+const addEntries = async () => {
+  try {
+    await Entry.create({ CandidateId: 2, VacancyId: 1, status: 'stage5' });
+  } catch (error) {
+    console.log(error);
+  }
+};
+// addEntries();
